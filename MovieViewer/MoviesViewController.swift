@@ -12,24 +12,29 @@ import MBProgressHUD
 
 
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var movies: [NSDictionary]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     let refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        
         // add refresh control to table view
         tableView.insertSubview(refreshControl, at: 0)
         
+        
         tableView.dataSource = self
         tableView.delegate = self
-        
+        searchBar.delegate = self
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
@@ -104,6 +109,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let imageUrl = NSURL(string: baseUrl + posterPath )
         
         
+        
             
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
@@ -115,16 +121,25 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        movies = searchText.isEmpty ? movies : movies?.filter({(data: NSDictionary) -> Bool in
+            
+            return title?.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        tableView.reloadData()
     }
-    */
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+
 
 }
