@@ -56,8 +56,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
     See the License for the specific language governing permissions and
     limitations under the License.
     
-    # Project 2 - Movies Now
-
+    
+# Project 2 - Movies Now
 Movies Now is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **X** hours spent in total
