@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0AF755341E40560F00C622D5"
-               BuildableName = "MovieViewer.app"
-               BlueprintName = "MovieViewer"
-               ReferencedContainer = "container:MovieViewer.xcodeproj">
+               BuildableName = "Movies Now.app"
+               BlueprintName = "Movies Now"
+               ReferencedContainer = "container:Movies Now.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AF755341E40560F00C622D5"
-            BuildableName = "MovieViewer.app"
-            BlueprintName = "MovieViewer"
-            ReferencedContainer = "container:MovieViewer.xcodeproj">
+            BuildableName = "Movies Now.app"
+            BlueprintName = "Movies Now"
+            ReferencedContainer = "container:Movies Now.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AF755341E40560F00C622D5"
-            BuildableName = "MovieViewer.app"
-            BlueprintName = "MovieViewer"
-            ReferencedContainer = "container:MovieViewer.xcodeproj">
+            BuildableName = "Movies Now.app"
+            BlueprintName = "Movies Now"
+            ReferencedContainer = "container:Movies Now.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AF755341E40560F00C622D5"
-            BuildableName = "MovieViewer.app"
-            BlueprintName = "MovieViewer"
-            ReferencedContainer = "container:MovieViewer.xcodeproj">
+            BuildableName = "Movies Now.app"
+            BlueprintName = "Movies Now"
+            ReferencedContainer = "container:Movies Now.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
